@@ -3,6 +3,8 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 
 const app = express();
+const resumeRoutes = require('./routes/resume');
+app.use('/api/resume', resumeRoutes);
 
 // Connect Database
 connectDB();
